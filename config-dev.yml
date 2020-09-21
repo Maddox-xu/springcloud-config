@@ -1,1 +1,13 @@
-这是一个开发环境的配置文件
+spring:
+  application:
+    name: cloud-config-center  #注册管理中心显示的集群名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Maddox-xu/springcloud-config.git #github仓库上面的git仓库名字
+          ##搜索目录
+          search-paths:
+            - springcloud-config
+      #读取分支
+      label: master
